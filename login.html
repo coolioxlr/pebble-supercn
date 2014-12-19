@@ -64,7 +64,7 @@
                         
                         if(response.status.code == 1){
                         	//error
-                        	
+                        	document.getElementById('errors').appendChild(document.createTextNode(response.status.explain));
                         }else{
                         	var sessiontoken = response.data.token;
                         	var location = "pebblejs://close#" + encodeURIComponent(sessiontoken);
@@ -72,7 +72,7 @@
                         }
                         
                     } else {
-                        document.getElementById('errors').appendChild(document.createTextNode("Wrong Username/Password"));
+                        
                     }
                 }
             };
